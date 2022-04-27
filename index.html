@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flight Search Engine</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body onload ="getSliderRange();">
+	<div id="container">
+		<span> Flight Search Engine</span>
+		<div id="left-side">
+			<div class="tab">
+			  <button class="tablinks" onclick="openCity(event, 'London')">One way</button>
+			  <button class="tablinks" onclick="openCity(event, 'Paris')">Return</button>
+			</div>
+			<div class="filters">
+				<input type="text" name="originCity"  placeholder="Enter Origin City" id="originCity">
+			</div>
+			<div class="filters">
+				<input type="text" name="destinationCity"  placeholder="Enter Destination City" id="destinationCity">
+
+			</div>
+			<div class="filters">
+				<input type="date" name="departureDate" id="departureDate">
+			</div>
+			<div class="filters">
+				<input type="date" name="returnDate" id="returnDate">
+			</div>
+			<div class="filters">
+				<select id="passengerCount" name="passengerCount">
+				  <option value="1">1</option>
+				  <option value="2">2</option>
+				  <option value="3">3</option>
+				  <option value="4">4</option>
+				</select>
+			</div>
+			<button value="search" name="search" id="searchBtn" onclick="showSearchList(event);">Search</button>
+			<div class="refine-search">
+				<p>Refine Flight Search</p>
+				<div class="rangeslider">
+				  <input type="range" min="0" max="10000" value="0" step="100" class="myslider" id="sliderRange">
+				  <p>Value: <span id="demo"></span></p>
+				</div>
+			</div>
+		</div>
+		<div id="right-side">
+
+		</div>
+	</div>
+</body>
+</html>
